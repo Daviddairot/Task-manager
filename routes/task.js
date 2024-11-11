@@ -11,5 +11,3 @@ router.post('/create', createTask);
 router.get('/:id', getTask).patch('/:id', updateTask).delete('/:id', deleteTask);
 
 module.exports = router;
-
-
