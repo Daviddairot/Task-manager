@@ -3,11 +3,11 @@ const getAllTasks = (req, res) => {
 }
 
 const createTask = (req, res) => {
-    res.send('this is the post side')
+    res.json(req.body)
 }
 
 const getTask = (req, res) =>{
-    res.send('get single content')
+    res.json({id:req.params.id})
 }
 
 const updateTask = (req, res) => {
