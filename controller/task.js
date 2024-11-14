@@ -1,4 +1,4 @@
-const Task = require('../models/task');
+const Task = require('../models/Task')
 
 
 const getAllTasks = (req, res) => {
@@ -7,8 +7,8 @@ const getAllTasks = (req, res) => {
 
 const createTask = async (req, res) => {
     try {
-      const task = await Task.create(req.body);
-      res.status(201).json({ task });
+      const task = await Task.create(req.body)
+      res.status(201).json({ task })
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
