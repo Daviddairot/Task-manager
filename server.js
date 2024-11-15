@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const tasks = require('./routes/task.js');
-const port = 4000;
+const port = process.env.PORT || 4000;
 const connectDB = require('./db/connect.js')
 require('dotenv').config()
 
@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
 
 // Registering the tasks route
 app.use('/api/v1/tasks', tasks);
-
 
 // Start the server
 const start = async () => {
